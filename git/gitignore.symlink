@@ -4,3 +4,8 @@
 *~
 *.swp
 *.rbc
+
+
+# HUDDLER FILES #
+#################
+huddler/config/sites/jordan.huddler.com

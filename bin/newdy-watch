@@ -1,6 +1,6 @@
 #!/bin/zsh
 if [ -z "$1" ]; then
-  dest="logan@newdy.huddler.com:/home/logan/www_sync"
+  dest="jordan@newdy.huddler.com:/home/jordan/www"
 else
   dest=$1
 fi
