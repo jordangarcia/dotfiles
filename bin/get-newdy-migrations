@@ -5,4 +5,4 @@ if [ ! -d "$PROJECTS" ]; then
 	exit
 fi
 
-rsync -avPz -e ssh logan@newdy.huddler.com:/home/logan/www/sql/ $PROJECTS/huddler/sql/
+rsync -avPz -e ssh jordan@newdy.huddler.com:/home/jordan/www/sql/ $PROJECTS/huddler/sql/
