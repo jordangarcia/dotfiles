@@ -55,7 +55,7 @@ augroup END
 au VimEnter * highlight clear SignColumn
 
 " Highlight 81st column
-set textwidth=80
+set textwidth=90
 set colorcolumn=+1
 
 "-------------------------------------------------------------------------------
@@ -133,14 +133,14 @@ let g:syntastic_mode_map = {
   \}
 
 " CtrlP
-let g:ctrlp_switch_buffer = 0
-let g:ctrlp_user_command = {
-    \ 'types': {
-      \ 1: ['.git', 'cd %s && git ls-files'],
-      \ 2: ['.hg', 'hg --cwd %s locate -I .'],
-      \ },
-    \ 'fallback': 'find %s -type f'
-  \ }
+"let g:ctrlp_switch_buffer = 0
+"let g:ctrlp_user_command = {
+    "\ 'types': {
+      "\ 1: ['.git', 'cd %s && git ls-files'],
+      "\ 2: ['.hg', 'hg --cwd %s locate -I .'],
+      "\ },
+    "\ 'fallback': 'find %s -type f'
+  "\ }
 
 " Ack
 nnoremap <leader>a :Ack!<space>
@@ -168,13 +168,12 @@ let g:session_autosave='no'
 " Enable filetype plugin
 filetype plugin on
 
-set nocursorline
 " Tabline modifications
 if has('gui')
   set guioptions-=e
 endif
 if exists("+showtabline")
-  function MyTabLine()
+  function! MyTabLine()
     let s = ''
     let t = tabpagenr()
     let i = 1
