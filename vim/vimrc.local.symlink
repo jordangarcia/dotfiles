@@ -55,7 +55,7 @@ augroup END
 au VimEnter * highlight clear SignColumn
 
 " Highlight 81st column
-set textwidth=90
+"set textwidth=90
 set colorcolumn=+1
 
 "-------------------------------------------------------------------------------
@@ -158,6 +158,11 @@ let g:indent_guides_enable_on_vim_startup = 0
 
 " spf13-vim
 let g:spf13_no_autochdir = 1
+
+" vim-javascript
+let g:html_indent_inctags = "html,body,head,tbody"
+let g:html_indent_script1 = "inc"
+let g:html_indent_style1 = "inc"
 
 "-------------------------------------------------------------------------------
 " General Settings & Modifications

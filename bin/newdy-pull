@@ -1,0 +1,21 @@
+#!/bin/zsh
+if [ -z "$1" ]; then
+  dest="jordan@newdy.huddler.com:/home/jordan/www"
+else
+  dest=$1
+fi
+
+if [ -d "$PROJECTS/huddler" ]; then
+	rsync \
+		--exclude=config/facebook-connectdemo-config.php \
+		--exclude=v2/system/application/libraries/ObjectTypes.php \
+		--exclude=v2/system/application/libraries/RawColumns.php \
+		--exclude=mini \
+		--exclude=v2/system/application/libraries/base/\* \
+		--exclude=xhprof \
+		--exclude=build \
+    --exclude=pub/imgrepo \
+		$dest $PROJECTS/huddler/
+else
+	echo "huddler directory not found"
+fi
