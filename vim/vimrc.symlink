@@ -43,7 +43,7 @@
 
     " Use local bundles if available {
         if filereadable(expand("~/.vimrc.bundles.local"))
-            source ~/.vimrc.bundles.local
+            "source ~/.vimrc.bundles.local
         endif
     " }
 
@@ -175,7 +175,7 @@
 
 " Formatting {
 
-    "set nowrap                      " Wrap long lines
+    set nowrap                      " Wrap long lines
     set autoindent                  " Indent at the same level of the previous line
     set shiftwidth=4                " Use indents of 4 spaces
     set expandtab                   " Tabs are spaces, not tabs
@@ -183,7 +183,7 @@
     set softtabstop=4               " Let backspace delete indent
     "set matchpairs+=<:>             " Match, to be used with %
     set pastetoggle=<F12>           " pastetoggle (sane indentation on pastes)
-    "set comments=sl:/*,mb:*,elx:*/  " auto format comment blocks
+    set comments=sl:/*,mb:*,elx:*/  " auto format comment blocks
     " Remove trailing whitespaces and ^M chars
     "autocmd FileType c,cpp,java,php,javascript,python,twig,xml,yml autocmd BufWritePre <buffer> call StripTrailingWhitespace()
     autocmd BufNewFile,BufRead *.html.twig set filetype=html.twig
@@ -356,21 +356,6 @@
         let g:snips_author = 'Steve Francia <steve.francia@gmail.com>'
     " }
 
-    " NerdTree {
-        map <C-e> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
-        map <leader>e :NERDTreeFind<CR>
-        nmap <leader>nt :NERDTreeFind<CR>
-
-        let NERDTreeShowBookmarks=1
-        let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
-        let NERDTreeChDirMode=0
-        let NERDTreeQuitOnOpen=1
-        let NERDTreeMouseMode=2
-        let NERDTreeShowHidden=1
-        let NERDTreeKeepTreeInNewTab=1
-        let g:nerdtree_tabs_open_on_gui_startup=0
-    " }
-
     " Tabularize {
         nmap <Leader>a& :Tabularize /&<CR>
         vmap <Leader>a& :Tabularize /&<CR>
@@ -443,6 +428,11 @@
         nnoremap <silent> <leader>gl :Glog<CR>
         nnoremap <silent> <leader>gp :Git push<CR>
     "}
+
+    " zencoding {
+        let g:user_zen_leader_key = '<c-g>'
+        let g:use_zen_complete_tag = 1
+    " }
 
     " neocomplcache {
 "        let g:acp_enableAtStartup = 0
@@ -550,6 +540,8 @@
         let g:indent_guides_guide_size = 1
         let g:indent_guides_enable_on_vim_startup = 1
     " }
+
+    let g:syntastic_mode_map ={ 'mode': 'passive', 'passive_filetypes': ['html'] }
 
 " }
 
@@ -690,4 +682,3 @@
 " Finish local initializations {
     call InitializeDirectories()
 " }
-
