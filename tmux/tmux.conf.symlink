@@ -15,7 +15,7 @@ setw -g mouse-select-pane on
 
 # This is hilariously absurd.  How many nerds use tmux on OS X every day and
 # it's still fundamentally broken?
-set -g default-command "reattach-to-user-namespace -l zsh"
+#set -g default-command "reattach-to-user-namespace -l zsh"
 
 # Less stretching to get to the first item.
 set -g base-index 1
@@ -56,7 +56,7 @@ bind -r C-Down  resize-pane -D 5
 bind -r C-Up    resize-pane -U 5
 
 # 256 colors please
-set -g default-terminal "screen-256color"
+set -g default-terminal "xterm"
 
 # Bad Wolf
 set -g status-fg white

@@ -9,3 +9,7 @@
 # HUDDLER FILES #
 #################
 config/sites/jordan.huddler.com
+config/sites/test.jordan.huddler.com
+pub/imgrepo
+test.php
+build
