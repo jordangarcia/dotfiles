@@ -302,6 +302,12 @@ let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
 
+" kein/rainbow_parens.vim
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+
 "-------------------------------------------------------------------------------
 " General Settings & Modifications
 "-------------------------------------------------------------------------------

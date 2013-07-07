@@ -1,5 +1,2 @@
-Bundle "vim-less"
-Bundle "VimClojure"
-Bundle "paredit.vim"
+"Bundle "vim-less"
 Bundle "smerrill/vcl-vim-plugin"
-"Bundle "airblade/vim-gitgutter"

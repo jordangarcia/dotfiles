@@ -68,7 +68,7 @@
     " list only the plugin groups you will use
     if !exists('g:spf13_bundle_groups')
         "let g:spf13_bundle_groups=['general', 'neocomplcache', 'programming', 'php', 'ruby', 'python', 'javascript', 'html', 'misc', 'scala']
-        let g:spf13_bundle_groups=['general', 'programming', 'php', 'javascript', 'html', 'misc', 'snipmate', 'jordan']
+        let g:spf13_bundle_groups=['general', 'programming', 'php', 'javascript', 'html', 'misc', 'snipmate', 'jordan', 'clojure']
     endif
 
     " To override all the included bundles, put
@@ -189,6 +189,14 @@
     " Jordan
         if count(g:spf13_bundle_groups, 'jordan')
             Bundle 'mattn/zencoding-vim'
+        endif
+    " Jordan
+        if count(g:spf13_bundle_groups, 'clojure')
+            Bundle 'tpope/vim-fireplace'
+            Bundle 'tpope/vim-classpath'
+            Bundle 'guns/vim-clojure-static'
+            Bundle 'paredit.vim'
+            Bundle 'kien/rainbow_parentheses.vim'
         endif
     endif
 " }
