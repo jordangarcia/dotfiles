@@ -163,7 +163,7 @@ fun! SetHuddlerWhitespace()
   if &ft =~ 'clojure'
     return
   endif
-  setlocal ts=4 sts=4 sw=4 noexpandtab
+  set ts=4 sts=4 sw=4 noexpandtab
 endfun
 autocmd BufRead,BufNewFile */www/* call SetHuddlerWhitespace()
 autocmd BufRead,BufNewFile */huddler/* call SetHuddlerWhitespace()

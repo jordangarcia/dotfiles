@@ -82,18 +82,19 @@
             Bundle 'altercation/vim-colors-solarized'
             Bundle 'spf13/vim-colors'
             Bundle 'tpope/vim-surround'
-            Bundle 'spf13/vim-autoclose'
+            "Bundle 'spf13/vim-autoclose'
             Bundle 'kien/ctrlp.vim'
             Bundle 'vim-scripts/sessionman.vim'
+            "Bundle 'Raimondi/delimitMate'
             "Bundle 'matchit.zip'
             Bundle 'Lokaltog/vim-powerline'
             "Bundle 'Lokaltog/vim-easymotion'
             Bundle 'godlygeek/csapprox'
             "Bundle 'jistr/vim-nerdtree-tabs'
             Bundle 'flazz/vim-colorschemes'
-            Bundle 'mbbill/undotree'
+            "Bundle 'mbbill/undotree'
             Bundle 'myusuf3/numbers.vim'
-            Bundle 'nathanaelkane/vim-indent-guides'
+            "Bundle 'nathanaelkane/vim-indent-guides'
             if !exists('g:spf13_no_views')
                 Bundle 'vim-scripts/restore_view.vim'
             endif
@@ -132,7 +133,7 @@
     " PHP
         if count(g:spf13_bundle_groups, 'php')
             "Bundle 'spf13/PIV'
-			Bundle 'arnaud-lb/vim-php-namespace'
+            Bundle 'arnaud-lb/vim-php-namespace'
         endif
 
     " Python
@@ -145,11 +146,10 @@
         endif
 
     " Javascript
-        if count(g:spf13_bundle_groups, 'javascript')
-            Bundle 'leshill/vim-json'
+    if count(g:spf13_bundle_groups, 'javascript')
+      Bundle 'leshill/vim-json'
             Bundle 'groenewege/vim-less'
-            Bundle 'jelera/vim-javascript-syntax'
-            Bundle 'lukaszb/vim-web-indent'
+            Bundle "pangloss/vim-javascript"
         endif
 
     " Java

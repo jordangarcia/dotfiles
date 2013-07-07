@@ -16,3 +16,4 @@ fi
 alias sshrudy='ssh logan@rudy.huddler.com'
 alias sshnewdy='ssh logan@newdy.huddler.com'
 alias genctags='ctags -R --sort=yes --verbose --languages=+PHP,-JavaScript --exclude=@$HOME/.ctags.exclude'
+alias vim='TERM=xterm-256color vim'
