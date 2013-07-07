@@ -1,0 +1,14 @@
+#! /bin/sh
+
+if [ ! -d "$PROJECTS" ]; then
+	echo "PROJECT directory not set"
+	exit
+fi
+
+rsync -avPz -e ssh jordan@newdy.huddler.com:/home/jordan/www/js/ $PROJECTS/huddler/js/
+rsync -avPz -e ssh jordan@newdy.huddler.com:/home/jordan/www/.grunt/ $PROJECTS/huddler/.grunt/
+rsync -avPz -e ssh jordan@newdy.huddler.com:/home/jordan/www/Gruntfile.js $PROJECTS/huddler/
+rsync -avPz -e ssh jordan@newdy.huddler.com:/home/jordan/www/lib/ $PROJECTS/huddler/lib/
+rsync -avPz -e ssh jordan@newdy.huddler.com:/home/jordan/www/tests/jasmine/ $PROJECTS/huddler/tests/jasmine/
+npm test
+trap "{ scp $PROJECTS/huddler/_SpecRunner.html jordan@newdy.huddler.com:/home/jordan/www/ ; }" EXIT
