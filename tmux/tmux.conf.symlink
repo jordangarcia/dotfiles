@@ -116,3 +116,4 @@ bind \; last-window
 bind -r ] next-window
 bind -r [ previous-window
 
+set-option -g default-command "reattach-to-user-namespace -l zsh"
