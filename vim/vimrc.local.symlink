@@ -209,6 +209,10 @@ nnoremap N Nzzzv
 "-------------------------------------------------------------------------------
 " Plugin Settings
 "-------------------------------------------------------------------------------
+" delimitMat
+let delimitMate_quotes = "\" \'"
+let delimitMate_smart_quotes = 0
+
 " jslint
 let $JS_CMD='node'
 
