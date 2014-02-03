@@ -288,6 +288,10 @@
         let b:match_ignorecase = 1
     " }
 
+    " NERDTree {
+        nnoremap <leader>d :NERDTreeToggle<cr>
+    " }
+
 
     " AutoCloseTag {
         " Make it so AutoCloseTag works for xml and xhtml files as well
