@@ -98,6 +98,8 @@
 
     " Jordan
             Bundle 'mattn/zencoding-vim'
+			Bundle 'digitaltoad/vim-jade'
+			Bundle 'scrooloose/nerdtree'
 " }
 
 " General {
